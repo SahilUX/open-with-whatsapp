@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.OpenWithWhatsApp" parent="Theme.AppCompat.DayNight.DarkActionBar" />
+
+    <!-- The redirect activity finishes inside onCreate, so it must never draw. -->
+    <style name="Theme.Invisible" parent="Theme.AppCompat.DayNight">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

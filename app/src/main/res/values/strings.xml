@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Open in WhatsApp</string>
+
+    <string name="how_it_works">Tap any phone number on your phone, then pick \"Open in WhatsApp\" from the list of apps. The number is converted to international format and the chat opens straight away.</string>
+    <string name="country_code_label">Country code for local numbers</string>
+    <string name="country_code_hint">971</string>
+    <string name="country_code_help">Numbers starting with 0 (like 050 123 4567) get this code. Numbers that already carry a country code are left exactly as they are.</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved: +%1$s</string>
+
+    <string name="test_label">Try a number</string>
+    <string name="test_hint">050 123 4567</string>
+    <string name="test">Preview</string>
+    <string name="test_ok">Opens wa.me/%1$s</string>
+    <string name="test_failed">Won\'t open: %1$s</string>
+
+    <string name="error_no_number">No phone number in that link</string>
+    <string name="error_invalid_number">Can\'t open %1$s in WhatsApp</string>
+    <string name="error_no_whatsapp">WhatsApp isn\'t installed</string>
+</resources>

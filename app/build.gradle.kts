@@ -15,11 +15,30 @@ android {
         versionName = "1.0"
     }
 
+    val releaseKeystorePath = System.getenv("KEYSTORE_PATH")
+    val hasReleaseSigning = releaseKeystorePath != null && file(releaseKeystorePath).exists()
+
+    if (hasReleaseSigning) {
+        signingConfigs {
+            create("release") {
+                storeFile = file(releaseKeystorePath!!)
+                storePassword = System.getenv("KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("KEY_ALIAS")
+                keyPassword = System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
-            // Signed with the debug key so `assembleRelease` produces an installable APK.
-            signingConfig = signingConfigs.getByName("debug")
+            // Uses the dedicated release key when KEYSTORE_PATH etc. are set (CI),
+            // otherwise falls back to the debug key so local `assembleRelease` still works.
+            signingConfig = if (hasReleaseSigning) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
+            }
         }
     }
 

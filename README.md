@@ -31,17 +31,16 @@ which also has a preview box for checking a number before you trust it.
 
 ## Install
 
-Grab `app-release.apk` from the build output and install it, or:
-
-```sh
-adb install -r app/build/outputs/apk/release/app-release.apk
-```
+Download `app-release.apk` from the [latest release](https://github.com/SahilUX/open-with-whatsapp/releases/latest)
+and open it. Android will ask you to allow installs from that source the
+first time — that's expected for any app outside the Play Store.
 
 Then tap any phone number and pick **Open in WhatsApp**.
 
-## Build
+## Build from source
 
-Needs JDK 17 and the Android SDK.
+Only needed if you want to modify the app yourself. Needs JDK 17 and the
+Android SDK.
 
 ```sh
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17

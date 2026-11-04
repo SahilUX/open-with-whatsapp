@@ -77,3 +77,7 @@ echo "sdk.dir=/opt/homebrew/share/android-commandlinetools" > local.properties
 | `RedirectActivity.kt` | Invisible activity registered for `tel:` links. |
 | `WhatsApp.kt` | Builds the `wa.me` intent, prefers the app over a browser. |
 | `SettingsActivity.kt` | Country code and the preview field. |
+
+## License
+
+MIT. See [LICENSE](LICENSE). The Gradle wrapper files keep their own Apache-2.0 licence.

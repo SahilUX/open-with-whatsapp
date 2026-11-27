@@ -4,6 +4,11 @@
       "type": "stdio",
       "command": "${HOME}/.local/bin/erp-mcp",
       "args": ["openwa-scout"]
+    },
+    "erp-lead": {
+      "type": "stdio",
+      "command": "${HOME}/.local/bin/erp-mcp",
+      "args": ["openwa-lead"]
     }
   }
 }
